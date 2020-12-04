@@ -31,6 +31,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
+      // Subscriptions can also have a new column that will link to the new DB table for what they selected during their survey. When they visit their subscriptions, add another button on it that will take them to the details of that subscription.
     });
   },
   down: (queryInterface, Sequelize) => {

@@ -2,6 +2,7 @@
 
 const params = require('../config/params');
 
+// May have to possibly change this products seeder to fit the theme and new products that we choose for them.
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('products', [

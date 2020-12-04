@@ -1,3 +1,5 @@
+// Product may have to be updated based on what theme we decide on. Right now, it is based on clothing and that may not be necessarily what we land on as a team.
+// This file will add a new table to a DB when npm run setup is used inside of the api folder to make tables in the database that is named inside the config > database.json file
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('products', {

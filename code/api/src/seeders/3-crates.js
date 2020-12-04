@@ -1,5 +1,6 @@
 'use strict';
 
+// May have to possibly change the themes of the crates that are available for the seeder based on the theme chosen.
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('crates', [
