@@ -54,3 +54,5 @@ export async function remove(parentValue, { id }, { auth }) {
     throw new Error('Operation denied.')
   }
 }
+
+// annotations: resolver for finidng crate style type?

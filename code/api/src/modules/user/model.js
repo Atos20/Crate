@@ -1,5 +1,6 @@
 'use strict'
-
+// Annotations: Possibly modify this file in order to add new category for a user (style preference)
+// add a boolean ex... has_taken_survey : true/false. Once it's true, FE won't show the survey option.
 // User
 module.exports = function(sequelize, DataTypes) {
   let User = sequelize.define('users', {

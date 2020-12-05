@@ -77,3 +77,4 @@ export async function remove(parentValue, { id }) {
 export async function getGenders() {
   return Object.values(params.user.gender)
 }
+// Annotations: add resolver function here for finding clothing style 

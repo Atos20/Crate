@@ -47,3 +47,4 @@ export const userGenders = {
   type: new GraphQLList(UserGenderType),
   resolve: getGenders
 }
+// Annotations: add query for style type? 

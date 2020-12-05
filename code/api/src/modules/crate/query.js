@@ -22,3 +22,5 @@ export const crateById = {
   },
   resolve: getById
 }
+
+//annotations: add query in here for crate styles? 
