@@ -55,4 +55,4 @@ export async function remove(parentValue, { id }, { auth }) {
   }
 }
 
-// annotations: resolver for finidng crate style type?
+// annotations: resolver for finidng crate by style type?
