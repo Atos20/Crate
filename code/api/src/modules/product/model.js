@@ -1,6 +1,7 @@
 'use strict'
 
 // Product
+// Does the product need to have a new field now for the style? I think it shoud be able to have multiple styles, and be associated to multiple users
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('products', {
     name: {

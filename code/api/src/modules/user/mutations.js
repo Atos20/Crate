@@ -28,6 +28,7 @@ export const userSignup = {
 }
 
 // Remove
+// Have to explore once a user adds a crate/products, what type of relationship is created. Will we have to destroy all? or destroy connections?
 export const userRemove = {
   type: UserType,
   args: {

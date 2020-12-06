@@ -2,6 +2,7 @@
 import { GraphQLInt, GraphQLString, GraphQLList } from 'graphql'
 
 // App Imports
+// We may have to update these fields here to include the addition ones added to a user
 import { UserType, UserLoginType, UserGenderType } from './types'
 import { getAll, getById, login, getGenders } from './resolvers'
 
