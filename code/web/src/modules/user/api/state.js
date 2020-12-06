@@ -11,9 +11,13 @@ export const userInitialState = {
 }
 
 // State
+
+//depending on the action.type invoked by the 
+//dispatcher the reducer will find the case needed
+//then it will modify the state accordingly
 export default (state = userInitialState, action) => {
   switch (action.type) {
-    case SET_USER:
+    case SET_USER://ckeck fo the user's token, and if it exists 
       return {
         ...state,
         isAuthenticated: !isEmpty(action.user),
