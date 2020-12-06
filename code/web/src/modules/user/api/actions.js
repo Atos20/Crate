@@ -17,24 +17,13 @@ export const LOGOUT = 'AUTH/LOGOUT'
 
 this function will take a parameter of answers = {}
 the returning value of this function will be a dispatch function that will upodate the survey state
-export fucntion fillOutSurvey(answers){
+export funntion fillOutSurvey(answers){
   return dispatch = {
     dispatch({
       type: FILL_OUT_SURVEY,
       answers
     })
-
-    we will have to make a api POST request to get the suggestios based  on the user answers
-
-    return axios.post(routeApi, query({
-      operstion: 'fillSurvey'
-      variables: 
-      fileds: [style suggestions]
-    }))
-
-       dispatch(setUser(token, user, userSuggestions))
-
-      loginSetUserLocalStorageAndCookie(userSuggetions)
+//reuse setUSer method to add the users answers
   }
 }
 */
