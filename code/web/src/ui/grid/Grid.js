@@ -29,7 +29,7 @@ const Grid = (props) => {
     }
     if (GridCell.props) {
       const newELement = React.cloneElement(GridCell, { gutter })
-      console.log(gutter)//gutter = false 
+      // console.log(gutter)//gutter = false 
       //REact.cloneElemet will make a copy of any children element
       //this will allow us to modify children elements and add new props
       // console.log(newELement)
