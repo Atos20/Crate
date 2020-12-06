@@ -37,7 +37,9 @@ class Subscriptions extends PureComponent {
         </Helmet>
 
         {/* Top title bar 
-        Instead of invoking the component with a self-closing tag <Picture /> if you invoke it will full opening and closing tags <Picture> </Picture> you can then place more code between it.
+        Instead of invoking the component with a self-closing tag <Picture /> 
+        if you invoke it will full opening and closing tags
+         <Picture> </Picture> you can then place more code between it.
         */}
         <Grid style={{ backgroundColor: grey }}>
           <GridCell style={{ padding: '2em', textAlign: 'center' }}>
