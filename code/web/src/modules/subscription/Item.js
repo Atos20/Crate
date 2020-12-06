@@ -24,18 +24,21 @@ class Item extends PureComponent {
 
     this.state = {
       isLoading: false
-    }
+    }//helps to enable the use of the button
   }
 
   onClickUnsubscribe = (id) => {
-    let check = confirm('Are you sure you want to unsubscribe to this crate?')
+    //when clicking on confirm with command + left-click => 
+    let check = window.confirm('Are you sure you want to unsubscribe to this crate?')
+    // confirm is the sames as doing window.confirm()
 
     if(check) {
       this.setState({
         isLoading: true
-      })
+      })//change the state to true and deisable the use of the button
 
       this.props.messageShow('Subscribing, please wait...')
+      //messageShows is a dispatcher function that changes the 
 
       this.props.remove({id})
         .then(response => {
