@@ -38,7 +38,7 @@ class Item extends PureComponent {
       })//change the state to true and deisable the use of the button
 
       this.props.messageShow('Subscribing, please wait...')
-      //messageShows is a dispatcher function that changes the 
+      //messageShows is a dispatcher function that changes the the current message
 
       this.props.remove({id})
         .then(response => {
