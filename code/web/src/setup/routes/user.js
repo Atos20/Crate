@@ -5,6 +5,13 @@ import Profile from '../../modules/user/Profile'
 import Subscriptions from '../../modules/user/Subscriptions'
 
 // User routes
+//add another pat for /style-preferences
+/*
+stylePreferences: {
+  path: '/user/login',
+  component: StyleSurvey
+}
+*/
 export default {
   login: {
     path: '/user/login',
