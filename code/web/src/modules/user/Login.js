@@ -40,50 +40,65 @@ class Login extends Component {
 
   onChange = (event) => {
     let user = this.state.user
-    user[event.target.name] = event.target.value
+    user[event.target.name] = event.target.value//updates the values from the input fields
 
-    this.setState({
+    this.setState({//updates the state with the received  input values
       user
     })
   }
 
   onSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault()//prevents the default behaivior of the form button
 
-    this.props.messageShow('Logging in, please wait...')
-
+    this.props.messageShow('Logging in, please wait...')//an action creator method from Redux that updates the store state
+    //the above method updates the the current mesage property from the sate to keep the user informed of what the status of the applications is
     this.props.login(this.state.user)
-      .then(response => {
-        if (this.props.user.error && this.props.user.error.length > 0) {
-          this.props.messageShow(this.props.user.error)
+    //reducer method that updates the state
+    //it takes the user credentials 
+    //dispatch the action of LOGIN_REQUEST from user/action.js
+    //where the payload is isLoading = true by default
+    //when the reducer is invoked with the proper action.type
+    //it makes an axios request to post the credentials where the return values are the user credentials and the token
+    //here it handles the erros for when (response.data.errors && response.data.errors.length > 0)
+    //and updates the error accordingly
+    //if else (there is no error || (response.data.data.userLogin.token !== ''))
+    //inside the login the action creator method setUser(token, user) is invoked 
+    //saves the token and user credentials in local storage
+    //this method updates the state with the returned credentials
+      .then(response => { //ther will always be a response from the API
+        if (this.props.user.error && this.props.user.error.length > 0) { //check if an error has been returned
+          this.props.messageShow(this.props.user.error) //display the error
 
           window.setTimeout(() => {
             this.props.messageHide()
-          }, 5000)
+          }, 5000)//the error will dissapear after 5 seconds
         } else {
-          this.props.messageHide()
+          this.props.messageHide()// hide message after a succesfull login
         }
       })
       .catch(error => {
-        this.props.messageShow(this.props.user.error)
+        this.props.messageShow(this.props.user.error)// if there user has input incorrect information the user will see 
+        //the following message => Sorry, the password you entered is incorrect. Please try again.
 
         window.setTimeout(() => {
           this.props.messageHide()
-        }, 5000)
+        }, 5000)//removes the message after 5 sec
       })
   }
 
   render() {
-    const { isLoading, error } = this.props.user
+    const { isLoading, error } = this.props.user //it is not making use of  the error when exist, 
+    //here is an apportunity to add more erro handling 
 
     return (
       <Grid gutter={true} alignCenter={true} style={{ padding: '2em' }}>
-        {/* SEO */}
-        <Helmet>
+        {/* SEO helmet helps changing the applications title dynamically*/}
+        <Helmet> 
           <title>Login to your account - Crate</title>
         </Helmet>
 
         {/* Left Content - Image Collage */}
+        {/* as a React.Children Grid allows to wrap other children elements*/}
         <GridCell>
           <Grid gutter={true} alignCenter={true}>
             <GridCell justifyCenter={true}>
@@ -111,7 +126,7 @@ class Login extends Component {
         <GridCell style={{ textAlign: 'center' }}>
           <H3 font="secondary" style={{ marginBottom: '1em' }}>Login to your account</H3>
 
-          {/* Login Form */}
+          {/* Login Form*/}
           <form onSubmit={this.onSubmit}>
             <div style={{ width: '25em', margin: '0 auto' }}>
               {/* Email */}
@@ -154,6 +169,7 @@ class Login extends Component {
         </GridCell>
 
         {/* Auth Check */}
+        {/* checks for the credential ROlES, if ADMIN, it is directed to the admin dasboard else crate.list.path */}
         <AuthCheck/>
       </Grid>
     )
@@ -161,11 +177,12 @@ class Login extends Component {
 }
 
 // Component Properties
+//expected props
 Login.propTypes = {
-  user: PropTypes.object.isRequired,
-  login: PropTypes.func.isRequired,
-  messageShow: PropTypes.func.isRequired,
-  messageHide: PropTypes.func.isRequired
+  user: PropTypes.object.isRequired,//object that is returned from the login function
+  login: PropTypes.func.isRequired,// login method from the action creator
+  messageShow: PropTypes.func.isRequired, // login method from the action creator
+  messageHide: PropTypes.func.isRequired // login method from the action creator
 }
 
 // Component State
