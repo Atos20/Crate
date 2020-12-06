@@ -12,8 +12,33 @@ export const LOGIN_RESPONSE = 'AUTH/LOGIN_RESPONSE'
 export const SET_USER = 'AUTH/SET_USER'
 export const LOGOUT = 'AUTH/LOGOUT'
 
-// Actions
+//Add another action creator that when invoked will dispatch and update the survey
+/*
 
+this function will take a parameter of answers = {}
+the returning value of this function will be a dispatch function that will upodate the survey state
+export fucntion fillOutSurvey(answers){
+  return dispatch = {
+    dispatch({
+      type: FILL_OUT_SURVEY,
+      answers
+    })
+
+    we will have to make a api POST request to get the suggestios based  on the user answers
+
+    return axios.post(routeApi, query({
+      operstion: 'fillSurvey'
+      variables: 
+      fileds: [style suggestions]
+    }))
+
+       dispatch(setUser(token, user, userSuggestions))
+
+      loginSetUserLocalStorageAndCookie(userSuggetions)
+  }
+}
+*/
+// Actions
 export function setUser(token, user) {
   if (token) {
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
@@ -36,7 +61,7 @@ export function login(userCredentials, isLoading = true) {
     })
 
     return axios.post(routeApi, query({
-      
+      //makes use of the gqp-query builder to make the API request
       operation: 'userLogin',
       variables: userCredentials,
       fields: ['user {name, email, role}', 'token']
