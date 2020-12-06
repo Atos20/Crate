@@ -17,13 +17,23 @@ const Grid = (props) => {
     gutter,
     ...others
   } = props
-
+    // console.log(children.props)
+    //the above console will display all the children that are pass through the parent component
+    //Whenever this component is invoked {props.children} 
+    //will also be displayed and this is just a reference to what is 
+    //between the opening and closing tags of the component.
   const GridCells = React.Children.map(children, (GridCell) => {
+    // console.log(GridCell.props)
     if (!GridCell) {
       return null
     }
     if (GridCell.props) {
-      return React.cloneElement(GridCell, { gutter })
+      const newELement = React.cloneElement(GridCell, { gutter })
+      console.log(gutter)//gutter = false 
+      //REact.cloneElemet will make a copy of any children element
+      //this will allow us to modify children elements and add new props
+      // console.log(newELement)
+      return  newELement 
     }
     return GridCell
   })
