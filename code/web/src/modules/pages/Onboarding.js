@@ -49,6 +49,7 @@ class Onboarding extends PureComponent {
     this.toggleVisible(false)
   }
 
+  //WE can potentially refactor this componenet to conditianlly render the innformation if the user is a woman or a man
   render() {
     const steps = [
       /* 1. Welcome to Crate */
