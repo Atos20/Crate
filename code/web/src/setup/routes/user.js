@@ -8,7 +8,7 @@ import Subscriptions from '../../modules/user/Subscriptions'
 //add another pat for /style-preferences
 /*
 stylePreferences: {
-  path: '/user/login',
+  path: ' /style-preferences',
   component: StyleSurvey
 }
 */
