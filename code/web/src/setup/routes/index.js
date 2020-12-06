@@ -8,7 +8,8 @@ import crate from './crate'
 
 // Combined routes
 export const routes = Object.assign(admin, home, user, product, crate)
-
+console.log(routes)
+//It takes all the routes and combines them into a single object
 // API Routes
 export const routeApi = APP_URL_API
 
