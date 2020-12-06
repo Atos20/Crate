@@ -14,12 +14,14 @@ export const LOGOUT = 'AUTH/LOGOUT'
 
 // Actions
 
-// Set a user after login or using localStorage token
 export function setUser(token, user) {
   if (token) {
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    console.log(axios.defaults.headers.common['Authorization'] = `Bearer ${token}`)
+    //the above console log, logs the token generated and given to the user
   } else {
     delete axios.defaults.headers.common['Authorization'];
+    // if there is no user logged in then it removes the authorization from the database
   }
 
   return { type: SET_USER, user }
@@ -34,6 +36,7 @@ export function login(userCredentials, isLoading = true) {
     })
 
     return axios.post(routeApi, query({
+      
       operation: 'userLogin',
       variables: userCredentials,
       fields: ['user {name, email, role}', 'token']
