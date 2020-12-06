@@ -8,6 +8,7 @@ export const userInitialState = {
   isLoading: false,
   isAuthenticated: false,
   details: null
+  //add a property isSurveyCompleted
 }
 
 // State
