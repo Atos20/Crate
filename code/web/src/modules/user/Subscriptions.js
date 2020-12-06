@@ -37,9 +37,9 @@ class Subscriptions extends PureComponent {
         </Helmet>
 
         {/* Top title bar 
-        Instead of invoking the component with a self-closing tag <Picture /> 
+        Instead of invoking the component with a self-closing tag <Grid /> 
         if you invoke it will full opening and closing tags
-         <Picture> </Picture> you can then place more code between it.
+         <Grid> </Grid> you can then place more code between it.
         */}
         <Grid style={{ backgroundColor: grey }}>
           <GridCell style={{ padding: '2em', textAlign: 'center' }}>
@@ -51,7 +51,18 @@ class Subscriptions extends PureComponent {
           </GridCell>
         </Grid>
 
-        {/* Product list */}
+        {/* Product list 
+        This section display all user's subscriptions if any,
+        the <GridCell> compoenent takes in more childre through the childrens.prop which 
+        display user's subscriptions.
+
+        in the ternerary expression first 
+        it evaluates if the subscriptions are available form the data base
+        if true it displays the message of  loading ...
+        else evaluates another ternerary. This conditions
+        is, if they are subscriptions  then it goes ajhead and displays the on the DOM
+        using the <Item/> component passing subscription as props.
+        */}
         <Grid>
           <GridCell>
             {
@@ -74,15 +85,16 @@ class Subscriptions extends PureComponent {
 
 // Component Properties
 Subscriptions.propTypes = {
-  subscriptions: PropTypes.object.isRequired,
+  subscriptions: PropTypes.object.isRequired,//required propTypes
   getListByUser: PropTypes.func.isRequired
 }
 
 // Component State
+//it allows the compoennet to know about the state of the store
 function subscriptionsState(state) {
   return {
     subscriptions: state.subscriptionsByUser
   }
 }
 
-export default connect(subscriptionsState, { getListByUser })(Subscriptions)
+export default connect(subscriptionsState, { getListByUser })(Subscriptions)//connecting store with React to dispatch actions
