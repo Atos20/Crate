@@ -88,7 +88,7 @@ class Login extends Component {
 
   render() {
     const { isLoading, error } = this.props.user //it is not making use of  the error when exist, 
-    //here is an apportunity to add more erro handling 
+    //here is an apportunity to add more error handling 
 
     return (
       <Grid gutter={true} alignCenter={true} style={{ padding: '2em' }}>
@@ -171,6 +171,7 @@ class Login extends Component {
         {/* Auth Check */}
         {/* checks for the credential ROlES, if ADMIN, it is directed to the admin dasboard else crate.list.path */}
         <AuthCheck/>
+        {/* {how is this checking for the ROLE} */}
       </Grid>
     )
   }
