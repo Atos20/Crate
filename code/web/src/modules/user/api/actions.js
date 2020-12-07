@@ -17,7 +17,7 @@ export const LOGOUT = 'AUTH/LOGOUT'
 
 this function will take a parameter of answers = {}
 the returning value of this function will be a dispatch function that will upodate the survey state
-export funntion fillOutSurvey(answers){
+export function fillOutSurvey(answers){
   return dispatch = {
     dispatch({
       type: FILL_OUT_SURVEY,
@@ -38,7 +38,7 @@ export function setUser(token, user) {
     // if there is no user logged in then it removes the authorization from the database
   }
 
-  return { type: SET_USER, user }
+  return { type: SET_USER, user }//return the type and the user that will be use to update the state
 }
 
 // Login a user using credentials
