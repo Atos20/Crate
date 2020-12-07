@@ -11,6 +11,7 @@ export async function get(parentValue, { id }) {
     ]
   })
 }
+// include style
 
 // Get subscription by user
 export async function getByUser(parentValue, {}, { auth }) {
@@ -28,6 +29,7 @@ export async function getByUser(parentValue, {}, { auth }) {
     throw new Error('Please login to view your subscriptions.')
   }
 }
+// include style
 
 // Get all subscriptions
 export async function getAll() {
@@ -38,6 +40,7 @@ export async function getAll() {
     ]
   })
 }
+//include styles
 
 // Create subscription
 export async function create(parentValue, { crateId }, { auth }) {
@@ -50,6 +53,7 @@ export async function create(parentValue, { crateId }, { auth }) {
     throw new Error('Please login to subscribe to this crate.')
   }
 }
+// include style
 
 // Delete subscription
 export async function remove(parentValue, { id }, { auth }) {

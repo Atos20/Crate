@@ -18,5 +18,6 @@ const SubscriptionType = new GraphQLObjectType({
     updatedAt: { type: GraphQLString }
   })
 })
+// style: {type: StyleType
 
 export default SubscriptionType

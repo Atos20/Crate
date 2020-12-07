@@ -16,6 +16,7 @@ export const subscriptionCreate = {
   },
   resolve: create
 }
+// must have a style before creating
 
 // Subscription remove
 export const subscriptionRemove = {

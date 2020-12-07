@@ -21,3 +21,4 @@ const query = new GraphQLObjectType({
 })
 
 export default query
+// add style

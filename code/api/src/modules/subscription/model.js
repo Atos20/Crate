@@ -15,6 +15,7 @@ module.exports = function(sequelize, DataTypes) {
     Subscription.belongsTo(models.User)
     Subscription.belongsTo(models.Crate)
   }
+  // has a style
 
   return Subscription
 }
