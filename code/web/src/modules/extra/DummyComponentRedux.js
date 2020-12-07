@@ -1,3 +1,5 @@
+// These files look like placeholders, we can probably use this for the survey
+
 // Imports
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
