@@ -43,18 +43,19 @@ class Item extends PureComponent {
         } else {
           this.props.messageShow('Subscribed successfully.')//if there are no errros the it was a suscessful subscription
 
-          this.props.history.push(userRoutes.subscriptions.path)//a
+          this.props.history.push(userRoutes.subscriptions.path)//add the subscription path to the history
+          // console.log(this.props.history)
         }
       })
       .catch(error => {
-        this.props.messageShow('There was some error subscribing to this crate. Please try again.')
+        this.props.messageShow('There was some error subscribing to this crate. Please try again.')//if there was an error with the server when we will cath the error
       })
       .then(() => {
         this.setState({
           isLoading: false
         })//after getting the crates then the app is no longer loadings
 
-        window.setTimeout(() => {//clears out the message in common/message.text
+        window.setTimeout(() => {//clears out the message in common/state.message.text
           this.props.messageHide()
         }, 5000)
       })
