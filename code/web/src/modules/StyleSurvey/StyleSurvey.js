@@ -27,9 +27,28 @@ this.state = {
 List of files need to be updated
 
 A StyleSurve will be creates
-- - setup/routes/user.js
-=> to add the path to the styleSurvey
-- setup/routes/user/
+-  setup/routes/user.js
+    => to add the path to the styleSurvey
+- web/src/modules/crate/iItem
+    => add route to the <StyleSurvey/> if the form hasn't been filled out, "/style-preferences"
+- web/src/modules/user/state
+    => add property to keep track of status of form isSurveyCompleted = false
+- web/src/modules/user/api/actions/js
+    => within the user reducer add a case for UPDATE_SURVEY that whill save the users answers
+    => add a new property to the user state called suerveyAnswers = {}
+            =>  this property will be an object that will keep track of the user's information 
+                - body shape
+                - size
+                - dislikes
+                - Outfit and ocasion
+                - places you shop
+                - price
+
+    => this property will track all the user answers
+
+- web/src/modules/user/api/actions/js
+most of the functions in this file can be reused to post the user's answers to the database
+
 */
 
 /*
