@@ -3,7 +3,7 @@
 // and let the user/api/action and user/api/state handle the functionality 
 
 
-// Double check with TextDecoderStream, because  this couls also be a different page???
+// Double check with team, because  this coulsd also be a different page???
 
 
 //need to import React from 'react'
@@ -21,6 +21,15 @@
 this.state = {
 
 }
+*/
+
+/*
+List of files need to be updated
+
+A StyleSurve will be creates
+- - setup/routes/user.js
+=> to add the path to the styleSurvey
+- setup/routes/user/
 */
 
 /*
