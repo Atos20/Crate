@@ -31,7 +31,7 @@ export funntion fillOutSurvey(answers){
 export function setUser(token, user) {
   if (token) {
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    console.log(axios.defaults.headers.common['Authorization'] = `Bearer ${token}`)
+    // console.log(axios.defaults.headers.common['Authorization'] = `Bearer ${token}`)
     //the above console log, logs the token generated and given to the user
   } else {
     delete axios.defaults.headers.common['Authorization'];
@@ -50,7 +50,7 @@ export function login(userCredentials, isLoading = true) {
     })
 
     return axios.post(routeApi, query({
-      //makes use of the gqp-query builder to make the API request
+      //makes use of the gql-query builder to make the API request
       operation: 'userLogin',
       variables: userCredentials,
       fields: ['user {name, email, role}', 'token']
