@@ -1,13 +1,16 @@
+// Here we are importing the bcrypt gem that is necessary in order to create a user and login. 
 // Imports
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
+// this is importing the paramaters and model information for a user. 
 // App Imports
 import serverConfig from '../../config/server'
 import params from '../../config/params'
 import models from '../../setup/models'
 
 // Create
+// this method is creating a new user and/or throwing an error if there are errors with the creation 
 export async function create(parentValue, { name, email, password }) {
   // Users exists with same email check
   const user = await models.User.findOne({ where: { email } })
@@ -27,6 +30,7 @@ export async function create(parentValue, { name, email, password }) {
   }
 }
 
+// sets up the method for loging in. 
 export async function login(parentValue, { email, password }) {
   const user = await models.User.findOne({ where: { email } })
 
@@ -58,21 +62,25 @@ export async function login(parentValue, { email, password }) {
   }
 }
 
+// finds a user based off of their ID
 // Get by ID
 export async function getById(parentValue, { id }) {
   return await models.User.findOne({ where: { id } })
 }
 
+// brings up a list of all users
 // Get all
 export async function getAll() {
   return await models.User.findAll()
 }
 
+// allows deletion of a user
 // Delete
 export async function remove(parentValue, { id }) {
   return await models.User.destroy({ where: { id } })
 }
 
+// returns a users gender
 // User genders
 export async function getGenders() {
   return Object.values(params.user.gender)

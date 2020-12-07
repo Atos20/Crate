@@ -2,6 +2,7 @@
 import models from '../../setup/models'
 import params from '../../config/params'
 
+// This method is finding a crate based off of ID and throwing an error message of the crate doesn't exist. 
 // Get crate by ID
 export async function getById(parentValue, { crateId }) {
   const crate = await models.Crate.findOne({ where: { id: crateId } })
@@ -15,11 +16,13 @@ export async function getById(parentValue, { crateId }) {
 }
 
 // Get all crates
+// Allows you show a list of all crates. 
 export async function getAll(parentValue, { orderBy }) {
   return await models.Crate.findAll({ order: [['id', orderBy]] })
 }
 
 // Create crate
+// Allows creation of a new crate. Must be an admin to create a new crate. 
 export async function create(parentValue, { name, description }, { auth }) {
   if(auth.user && auth.user.role === params.user.roles.admin) {
     return await models.Crate.create({
@@ -32,6 +35,7 @@ export async function create(parentValue, { name, description }, { auth }) {
 }
 
 // Update crate
+// Updates your crate. Must be admin in order to update a crate.
 export async function update(parentValue, { id, name, description }, { auth }) {
   if(auth.user && auth.user.role === params.user.roles.admin) {
     return await models.Crate.update(
@@ -47,6 +51,7 @@ export async function update(parentValue, { id, name, description }, { auth }) {
 }
 
 // Delete crate
+// deletes crate based off of ID
 export async function remove(parentValue, { id }, { auth }) {
   if(auth.user && auth.user.role === params.user.roles.admin) {
     return await models.Crate.destroy({where: {id}})
