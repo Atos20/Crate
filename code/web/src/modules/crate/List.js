@@ -19,6 +19,7 @@ import CrateItem from './Item'
 class List extends PureComponent {
 
   // Runs on server only for SSR
+  //SSR => server side rendering
   static fetchData({ store }) {
     return store.dispatch(getCratesList('ASC'))
   }
