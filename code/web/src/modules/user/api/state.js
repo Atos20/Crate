@@ -18,18 +18,18 @@ export const userInitialState = {
 //then it will modify the state accordingly
 export default (state = userInitialState, action) => {
   switch (action.type) {
-    case SET_USER://ckeck fo the user's token, and if it exists 
+    case SET_USER://check for the user's token, and if it exists 
       return {
         ...state,
-        isAuthenticated: !isEmpty(action.user),
+        isAuthenticated: !isEmpty(action.user),//helper function that checks for properties
         details: action.user,
       }
 
-    case LOGIN_REQUEST:
+    case LOGIN_REQUEST://case for when the user requests to log in
       return {
-        ...state,
-        error: null,
-        isLoading: action.isLoading
+        ...state,//makes a copy of the initial state
+        error: null,// no error
+        isLoading: action.isLoading //loading is true
       }
 
     case LOGIN_RESPONSE:
@@ -48,7 +48,7 @@ export default (state = userInitialState, action) => {
         details: null
       }
 
-    default:
+    default://returs the original state of the state
       return state
   }
 }
