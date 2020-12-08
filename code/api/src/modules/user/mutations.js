@@ -38,3 +38,14 @@ export const userRemove = {
   },
   resolve: remove
 }
+
+export const userUpdateSurvey = {
+  type: UserType,
+  args: {
+    id: {
+      name: 'id',
+      type: GraphQLInt
+  }
+},
+resolve: update
+}

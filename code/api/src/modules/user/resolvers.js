@@ -27,6 +27,31 @@ export async function create(parentValue, { name, email, password }) {
   }
 }
 
+export async function update(parentValue, { id, style }) {
+  const user = await models.User.findOne ({ where: { id }});
+
+  if (!user) {
+    throw new Error(`The user with the id of ${id} was not found.`)
+  } else {
+    const userDetails = User.get();
+
+    userDetails.survey = true;
+    userDetails.style = style;
+
+    const userDetailsToken = {
+      id: userDetails.id,
+      name: userDetails.name,
+      email: userDetails.email,
+      role: userDetails.role
+    }
+
+    return {
+      user: userDetails,
+      token: jwt.sign(userDetailsToken, serverConfig.secret)
+    }
+  }
+}
+
 export async function login(parentValue, { email, password }) {
   const user = await models.User.findOne({ where: { email } })
 
