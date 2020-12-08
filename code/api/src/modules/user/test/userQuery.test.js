@@ -27,7 +27,7 @@ describe('User Queries', () => {
     it('returns a user based on id', async (done) => {
         const response = await request(server)
             .post('/graphql')
-            .send({query: '{user(id:1) {email name role survey style createdAt}}'})
+            .send({query: '{user(id:1) {email name role survey style }}'})
             .expect(200)
             expect(response.body).toMatchObject({
                 data: {
@@ -36,8 +36,7 @@ describe('User Queries', () => {
                         name: 'The Admin',
                         role: 'ADMIN',
                         survey: false,
-                        style: null,
-                        createdAt: '1607446876781'
+                        style: null
                     }
                 }
             })
