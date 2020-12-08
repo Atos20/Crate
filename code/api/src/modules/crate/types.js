@@ -1,6 +1,8 @@
 // Imports
 import { GraphQLObjectType, GraphQLString, GraphQLInt } from 'graphql'
 
+// GraphQL Crate object
+// Declaration of Crate attributes (what's accessible, and what data type each one is)
 // Crate type
 const CrateType = new GraphQLObjectType({
   name: 'crate',

@@ -2,6 +2,8 @@
 import params from '../../config/params'
 import models from '../../setup/models'
 
+// Mutations pull from here
+// Product actions: get product by slug, get product by id, get related products, create, update, destroy products, and get product type 
 // Get all products
 export async function getAll() {
   return await models.Product.findAll({ order: [['id', 'DESC']] })

@@ -19,6 +19,12 @@ module.exports = {
       role: {
         type: Sequelize.TEXT
       },
+      survey: {
+        type: Sequelize.BOOLEAN
+      },
+      style: {
+        type: Sequelize.TEXT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

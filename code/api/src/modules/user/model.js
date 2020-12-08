@@ -1,6 +1,7 @@
 'use strict'
 
-// User
+// User database model
+
 module.exports = function(sequelize, DataTypes) {
   let User = sequelize.define('users', {
     name: {
@@ -13,6 +14,12 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT
     },
     role: {
+      type: DataTypes.TEXT
+    },
+    survey: {
+      type: DataTypes.BOOLEAN
+    },
+    style: {
       type: DataTypes.TEXT
     }
   })
