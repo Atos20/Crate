@@ -1,3 +1,6 @@
+// Part of schema that modifies Crate data
+// CRUD functionality without 'read'?
+
 // Imports
 import { GraphQLString, GraphQLInt } from 'graphql'
 
@@ -5,6 +8,7 @@ import { GraphQLString, GraphQLInt } from 'graphql'
 import CrateType from './types'
 import { create, remove, update } from './resolvers'
 
+// Defined mutations: create, update, destroy
 // Crate create
 export const crateCreate = {
   type: CrateType,

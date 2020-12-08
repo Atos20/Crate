@@ -2,13 +2,15 @@
 import models from '../../setup/models'
 import params from '../../config/params'
 
+// Following actions are defined below. I believe this is where the mutations are pulling from
+// Crate actions: index, create, update, destroy
 // Get crate by ID
 export async function getById(parentValue, { crateId }) {
   const crate = await models.Crate.findOne({ where: { id: crateId } })
 
   if (!crate) {
     // Crate does not exists
-    throw new Error('The crate you are looking for does not exists or has been discontinued.')
+    throw new Error('The crate you are looking for does not exist or has been discontinued.')
   } else {
     return crate
   }

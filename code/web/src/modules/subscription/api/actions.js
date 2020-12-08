@@ -16,6 +16,8 @@ export const SUBSCRIPTIONS_GET_REQUEST = 'SUBSCRIPTIONS/GET_REQUEST'
 export const SUBSCRIPTIONS_GET_RESPONSE = 'SUBSCRIPTIONS/GET_RESPONSE'
 export const SUBSCRIPTIONS_GET_FAILURE = 'SUBSCRIPTIONS/GET_FAILURE'
 
+// Query/mutation requests that FE can make to the BE API
+// operation for each action corresponds to the resolver function name 
 // Actions
 
 // Get list of subscriptions

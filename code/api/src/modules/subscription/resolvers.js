@@ -1,6 +1,9 @@
 // App Imports
 import models from '../../setup/models'
 
+// Subscription actions that mutations are pulling from
+// Actions correspond to function names on the FE
+// Subscription actions: show by id, show by user, index, create, destroy
 // Get subscription by ID
 export async function get(parentValue, { id }) {
   return await models.Subscription.findOne({
