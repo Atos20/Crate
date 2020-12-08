@@ -14,6 +14,12 @@ module.exports = function(sequelize, DataTypes) {
     },
     role: {
       type: DataTypes.TEXT
+    },
+    survey: {
+      type: DataTypes.BOOLEAN
+    },
+    style: {
+      type: DataTypes.TEXT
     }
   })
 
