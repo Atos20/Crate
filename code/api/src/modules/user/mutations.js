@@ -39,7 +39,6 @@ export const userRemove = {
   resolve: remove
 }
 
-<<<<<<< HEAD
 // Update
 export const userUpdate = {
   type: UserType,
@@ -59,6 +58,3 @@ export const userUpdate = {
   },
   resolve: update
 }
-=======
-// Change survey from false to true
->>>>>>> 44732d6138778b204a5f7ced228c5329cbad2ccb

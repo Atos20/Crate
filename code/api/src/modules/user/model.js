@@ -21,11 +21,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     style: {
       type: DataTypes.TEXT
-<<<<<<< HEAD
     },
-=======
-    }
->>>>>>> 44732d6138778b204a5f7ced228c5329cbad2ccb
   })
 
   User.associate = function(models) {
