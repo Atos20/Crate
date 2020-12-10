@@ -1,6 +1,8 @@
 // Imports
 import { GraphQLObjectType, GraphQLString, GraphQLInt } from 'graphql'
 
+// GraphQL Product object
+// Declaration of Product attributes, along with data types 
 // Product type
 const ProductType = new GraphQLObjectType({
   name: 'product',

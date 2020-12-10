@@ -13,6 +13,8 @@ export const SET_USER = 'AUTH/SET_USER'
 export const LOGOUT = 'AUTH/LOGOUT'
 export const ASSIGN_STYLE = 'ASSIGN_STYLE'
 
+// Query/mutation requests that FE can make to the BE API
+// operation for each action corresponds to the names in API resolver
 // Actions
 
 // Set a user after login or using localStorage token

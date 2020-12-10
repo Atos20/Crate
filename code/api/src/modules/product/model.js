@@ -1,6 +1,7 @@
 'use strict'
 
-// Product
+// Product database model
+// Product has a name, slug, description, type, gender, and image 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('products', {
     name: {

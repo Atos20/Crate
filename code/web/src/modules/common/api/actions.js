@@ -6,6 +6,7 @@ export const MESSAGE_SHOW = 'COMMON_MESSAGE_SHOW'
 export const MESSAGE_HIDE = 'COMMON_MESSAGE_HIDE'
 
 // Actions
+// Honestly, not sure what this is doing. Maybe a POST request?
 export function messageShow(message) {
   return { type: MESSAGE_SHOW, message }
 }
@@ -23,4 +24,3 @@ export function upload(data) {
     })
   }
 }
-

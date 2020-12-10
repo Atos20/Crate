@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import userRoutes from '../../setup/routes/user'
 
 // Component
+// Authentication - will redirect to login if authentication fails 
 const RoutePrivate = (props) => (
   props.user.isAuthenticated
     ? props.role
