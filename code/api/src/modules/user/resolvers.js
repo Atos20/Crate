@@ -58,6 +58,38 @@ export async function login(parentValue, { email, password }) {
   }
 }
 
+// Update
+export async function update(parentValue, { id, survey, style }, { auth }) {
+  const styles = { 'athletic': 2, 'businessAttire': 1, 'casualEverday': 3 };
+  const vals = Object.values(styles);
+  const styleChoice = Math.max(...vals);
+  const max = Math.max(...vals);
+  const key = Object.keys(styles)[Object.values(styles).indexOf(styleChoice)];
+  console.log(key);
+
+  var newStyle = null
+
+  // assign newStyle
+  if (key == 'athletic') {
+    newStyle = 'athletic'
+  } else if (key == 'businessAttire') {
+    newStyle = 'businessAttire'
+  } else {
+    newStyle = 'casualEverday'
+  }
+
+  if (auth.user) {
+    await models.User.update(
+      {
+        survey: true,
+        style: newStyle
+      },
+      { where: { id } }
+    )
+    return await getById(parentValue, { id })
+  }
+}
+
 // Get by ID
 export async function getById(parentValue, { id }) {
   return await models.User.findOne({ where: { id } })
