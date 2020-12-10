@@ -34,7 +34,7 @@ describe('User Queries', () => {
           email: 'admin@crate.com',
           name: 'The Admin',
           role: 'ADMIN',
-          createdAt: '1607446876781'
+          createdAt: '1607461482838'
         }
       }
     })

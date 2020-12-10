@@ -27,31 +27,6 @@ export async function create(parentValue, { name, email, password }) {
   }
 }
 
-export async function update(parentValue, { id, style }) {
-  const user = await models.User.findOne ({ where: { id }});
-
-  if (!user) {
-    throw new Error(`The user with the id of ${id} was not found.`)
-  } else {
-    const userDetails = User.get();
-
-    userDetails.survey = true;
-    userDetails.style = style;
-
-    const userDetailsToken = {
-      id: userDetails.id,
-      name: userDetails.name,
-      email: userDetails.email,
-      role: userDetails.role
-    }
-
-    return {
-      user: userDetails,
-      token: jwt.sign(userDetailsToken, serverConfig.secret)
-    }
-  }
-}
-
 export async function login(parentValue, { email, password }) {
   const user = await models.User.findOne({ where: { email } })
 
@@ -80,6 +55,38 @@ export async function login(parentValue, { email, password }) {
         token: jwt.sign(userDetailsToken, serverConfig.secret)
       }
     }
+  }
+}
+
+// Update
+export async function update(parentValue, { id, survey, style }, { auth }) {
+  const styles = { 'athletic': 2, 'businessAttire': 1, 'casualEverday': 3 };
+  const vals = Object.values(styles);
+  const styleChoice = Math.max(...vals);
+  const max = Math.max(...vals);
+  const key = Object.keys(styles)[Object.values(styles).indexOf(styleChoice)];
+  console.log(key);
+
+  var newStyle = null
+
+  // assign newStyle
+  if (key == 'athletic') {
+    newStyle = 'athletic'
+  } else if (key == 'businessAttire') {
+    newStyle = 'businessAttire'
+  } else {
+    newStyle = 'casualEverday'
+  }
+
+  if (auth.user) {
+    await models.User.update(
+      {
+        survey: true,
+        style: newStyle
+      },
+      { where: { id } }
+    )
+    return await getById(parentValue, { id })
   }
 }
 
