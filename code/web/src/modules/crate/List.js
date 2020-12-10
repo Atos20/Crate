@@ -15,6 +15,7 @@ import Loading from '../common/Loading'
 import EmptyMessage from '../common/EmptyMessage'
 import CrateItem from './Item'
 
+
 // Component
 class List extends PureComponent {
 

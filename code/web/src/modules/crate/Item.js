@@ -29,6 +29,10 @@ class Item extends PureComponent {
   }
 
   onClickSubscribe = (crateId) => {
+
+    // this.props.user.isSurveyCompleted === false ? 
+    //   this.props.history.push(userRoutes.survey.path): something different
+
     this.setState({
       isLoading: true
     })
@@ -42,7 +46,9 @@ class Item extends PureComponent {
         } else {
           this.props.messageShow('Subscribed successfully.')
 
-          this.props.history.push(userRoutes.subscriptions.path)
+          // this.props.history.push(userRoutes.subscriptions.path)
+          // console.log(userRoutes.subscriptions.path)
+
         }
       })
       .catch(error => {
@@ -60,6 +66,7 @@ class Item extends PureComponent {
   }
 
   render() {
+    const { isSurveyCompleted } = this.props.user
     const { id, name, description } = this.props.crate
     const { isLoading } = this.state
 
@@ -75,15 +82,22 @@ class Item extends PureComponent {
           <p style={{ color: grey2, marginTop: '1em' }}>{description}</p>
 
           <p style={{ textAlign: 'center', marginTop: '1.5em', marginBottom: '1em' }}>
-            <Button
-              theme="primary"
-              onClick={this.onClickSubscribe.bind(this, id)}
-              type="button"
-              disabled={ isLoading }
-            >
-              <Icon size={1.2} style={{ color: white }}>add</Icon> Subscribe
-            </Button>
+            
+            <Link to={isSurveyCompleted ? userRoutes.subscriptions.path : userRoutes.survey.path}>
+
+              <Button
+                theme="primary"
+                onClick={this.onClickSubscribe.bind(this, id)}
+                type="button"
+                disabled={ isLoading }
+              >
+                <Icon size={1.2} style={{ color: white }}>add</Icon> Subscribe
+              </Button>
+            </Link>
+            
+          
           </p>
+          
         </div>
       </Card>
     )

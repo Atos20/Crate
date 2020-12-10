@@ -11,6 +11,7 @@ export const LOGIN_REQUEST = 'AUTH/LOGIN_REQUEST'
 export const LOGIN_RESPONSE = 'AUTH/LOGIN_RESPONSE'
 export const SET_USER = 'AUTH/SET_USER'
 export const LOGOUT = 'AUTH/LOGOUT'
+export const ASSIGN_STYLE = 'ASSIGN_STYLE'
 
 // Actions
 
@@ -48,8 +49,8 @@ export function login(userCredentials, isLoading = true) {
           const user = response.data.data.userLogin.user
 
           dispatch(setUser(token, user))
-
-          loginSetUserLocalStorageAndCookie(token, user)
+          //change the state to true 
+          loginSetUserLocalStorageAndCookie(token, user) 
         }
 
         dispatch({
