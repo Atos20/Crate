@@ -40,4 +40,14 @@ describe('User Queries', () => {
     })
     done();
   });
+
+  it('updates a users style and survey', async (done) => {
+    const response = await request(server)
+      .post('/graphql')
+      .send({ query: 'mutation { userUpdate(id: 1, style: "Athletic", survey: true) { id style survey } }' })
+      .expect(200)
+
+    expect(response.body.data.userUpdate.style).toEqual('Athletic');
+    done();
+  })  
 })
