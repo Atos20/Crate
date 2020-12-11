@@ -16,12 +16,12 @@ Insert images of final survey here.
 ## Contributors
 **Front-end Team:**
 * Nathan Darrington: [GitHub](https://github.com/npdarrington/) | [LinkedIn](https://www.linkedin.com/in/nathandarrington/)
-* Orlando Martinez Murcio: [GitHub]() | [LinkedIn]()
+* Orlando Martinez Murcio: [GitHub](https://github.com/Atos20) | [LinkedIn](https://www.linkedin.com/in/orlando-martinez-murcio-19605472/)
 
 **Back-end Team:**
 * Dan Halverson: [GitHub](https://github.com/dhalverson) | [LinkedIn](https://www.linkedin.com/in/daniel-halverson/)
 * Roberto Rodriguez: [GitHub](https://gist.github.com/robertorodriguez12) | [LinkedIn](https://www.linkedin.com/in/roberto-j-rodriguez12/)
-* Saryn Mooney: [GitHub]() | [LinkedIn]()
+* Saryn Mooney: [GitHub](https://github.com/sarynm12) | [LinkedIn](https://www.linkedin.com/in/saryn-mooney-34503984/)
 * Alex Desjardins: [GitHub](https://github.com/moosehandlr) | [LinkedIn](https://www.linkedin.com/in/alex-desjardins-59297b8b/)  
 
 ### Data flow
