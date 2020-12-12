@@ -13,8 +13,8 @@ describe('User Queries', () => {
                schema: schema,
                graphiql: false
            })
-       )
-   })
+       );
+   });
 
    it('can create a user', async () => {
      const response = await request(server)
@@ -25,4 +25,12 @@ describe('User Queries', () => {
       expect(response.body.data.userSignup.name).toEqual('Stubz');
       expect(response.body.data.userSignup.email).toEqual('stubz@crate.com');
     });
- })
+
+    it('can update a user', async () => {
+      const response = await request(server)
+        .post('/graphql')
+        .send({ query: 'mutation { userUpdate(id: 1, survey: true, style: "athletic") { name survey style } }' })
+        .expect(200)
+
+    });
+ });
