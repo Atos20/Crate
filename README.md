@@ -9,6 +9,9 @@
 - Written in ES6+ using Babel + Webpack
 - Designed using Adobe Experience Design. Preview it [here](https://xd.adobe.com/view/a662a49f-57e7-4ffd-91bd-080b150b0317/).
 
+## Updates made by our team:
+* We are a small group (7 individuals) of Turing Students, for our current project, we were tasked with adding a style survey for users that will help them determine what their dress style is. The survey consists of a series of categories such as tops, bottoms, dresses, shoes, accessories, etc. After I have completed the survey, I am given a summary of my style such as ‘classic but edgy’. Once the user completes the style survey, their user object will be updated with a new column of style, this will allow us to filter the results that the user receives in order to more easily present items that would fit with their style. 
+
 ## Style Survey
 ```
 Insert images of final survey here.
@@ -25,10 +28,11 @@ Insert images of final survey here.
 * Alex Desjardins: [GitHub](https://github.com/moosehandlr) | [LinkedIn](https://www.linkedin.com/in/alex-desjardins-59297b8b/)  
 
 ### Data flow
-![survey data flow](https://user-images.githubusercontent.com/56448912/101990381-00a2d680-3c64-11eb-8d0e-a293de4d463c.png)
+![data flow](https://user-images.githubusercontent.com/56448912/101990581-e3bad300-3c64-11eb-8aac-936f799ea15c.png)
+![image](https://user-images.githubusercontent.com/56448912/101990659-42804c80-3c65-11eb-8f87-9f11a94c8b3d.png)
 
-### User flow
-<img src="" alt="user flow" width="500"/>
+### Survey Data flow
+![survey data flow](https://user-images.githubusercontent.com/56448912/101990381-00a2d680-3c64-11eb-8d0e-a293de4d463c.png)
 
 ### Wireframe for style survey feature
 ![wireframes](https://user-images.githubusercontent.com/56448912/101990295-62af0c00-3c63-11eb-8d77-7ff31a0a1ac1.png)
