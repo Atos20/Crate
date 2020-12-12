@@ -31,7 +31,7 @@ Insert images of final survey here.
 <img src="" alt="user flow" width="500"/>
 
 ### Wireframe for style survey feature
-<img src="" alt="wireframe" width="500"/>
+![image](https://user-images.githubusercontent.com/56448912/101990295-62af0c00-3c63-11eb-8d77-7ff31a0a1ac1.png)
 
 ## Features
 - Modular and easily scalable code structure
