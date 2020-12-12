@@ -18,14 +18,14 @@ export const ASSIGN_STYLE = 'ASSIGN_STYLE'
 // Actions
 
 // Set a user after login or using localStorage token
-export function setUser(token, user, survey) {
+export function setUser(token, user) {
   if (token) {
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
   } else {
     delete axios.defaults.headers.common['Authorization'];
   }
 
-  return { type: SET_USER, user, survey }
+  return { type: SET_USER, user }
 }
 
 // Login a user using credentials
@@ -49,7 +49,7 @@ export function login(userCredentials, isLoading = true) {
         } else if (response.data.data.userLogin.token !== '') {
           const token = response.data.data.userLogin.token
           const user = response.data.data.userLogin.user
-          dispatch(setUser(token, user, user.survey))
+          dispatch(setUser(token, user))
           //change the state to true 
           loginSetUserLocalStorageAndCookie(token, user)
         }
@@ -92,7 +92,7 @@ export function register(userDetails) {
 export function assignUserStyle(userDetails) {
   return dispatch => {
     dispatch({
-      type: LOGIN_REQUEST,
+      type: ASSIGN_STYLE,
       userDetails
     })
 
