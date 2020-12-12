@@ -23,7 +23,7 @@ export default (state = userInitialState, action) => {
         id: action.id,
         survey: action.survey,
         style: action.style,
-        isSurveyCompleted: true // this is not setting true either???
+        isSurveyCompleted: action.survey
       }
 
     case SET_USER:
@@ -31,7 +31,7 @@ export default (state = userInitialState, action) => {
         ...state,
         isAuthenticated: !isEmpty(action.user),
         details: action.user,
-        isSurveyCompleted: action.survey
+        isSurveyCompleted: action.user.survey
       }
 
     case LOGIN_REQUEST:
