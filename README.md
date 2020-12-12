@@ -25,13 +25,13 @@ Insert images of final survey here.
 * Alex Desjardins: [GitHub](https://github.com/moosehandlr) | [LinkedIn](https://www.linkedin.com/in/alex-desjardins-59297b8b/)  
 
 ### Data flow
-<img src="" alt="data flow" width="500"/>
+![survey data flow](https://user-images.githubusercontent.com/56448912/101990381-00a2d680-3c64-11eb-8d0e-a293de4d463c.png)
 
 ### User flow
 <img src="" alt="user flow" width="500"/>
 
 ### Wireframe for style survey feature
-![image](https://user-images.githubusercontent.com/56448912/101990295-62af0c00-3c63-11eb-8d77-7ff31a0a1ac1.png)
+![wireframes](https://user-images.githubusercontent.com/56448912/101990295-62af0c00-3c63-11eb-8d77-7ff31a0a1ac1.png)
 
 ## Features
 - Modular and easily scalable code structure
