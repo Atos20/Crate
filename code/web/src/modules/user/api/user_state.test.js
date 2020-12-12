@@ -36,31 +36,39 @@ describe('userActions', () => {
 
   })
 
-  it('should work', () => {
-    //test ASSIGN_STYLE
-    // const action = {type: actions.ASSIGN_STYLE, style: 'GOOOOFFY', isSurveyCompleted: true}
-
-    // const result =  reducer(fakeInitialState, action)
-
-    // const newState = {
-    //   error: null,
-    //   isLoading: false,
-    //   isAuthenticated: false,
-    //   details: null,
-    //   isSurveyCompleted: true,
-    //   style: action.style
-    // }
-
-    // expect(result).toEqual(newState)
-    expect(true).toEqual(true)
-
-  })
-
+  
   it('should return the initial state', () => {
     const result = reducer(undefined, {})
     expect(result).toEqual(fakeInitialState)
   });
   
+  it('should work', () => {
+
+    const action = {
+      type: actions.ASSIGN_STYLE, 
+      id: 1,
+      survey: true,
+      style: 'GOOOOFFY', 
+      isSurveyCompleted: true
+    }
+
+    const result =  reducer(fakeInitialState, action)
+
+    const newState = {
+      error: null,
+      isLoading: false,
+      details: null,
+      id: 1,
+      isAuthenticated: false,
+      isSurveyCompleted: true,
+      style: 'GOOOOFFY',
+      survey: true
+    }
+
+    expect(result).toEqual(newState)
+
+
+  })
   
   it('should be able to make a LOGIN_REQUEST', () => {
     const action = {type: actions.LOGIN_REQUEST, isLoading: true}
