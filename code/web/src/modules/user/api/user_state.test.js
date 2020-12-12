@@ -12,7 +12,8 @@ describe('userActions', () => {
       fakeUser = {
         name: "The User",
         email: "user@crate.com",
-        role: "USER"
+        role: "USER",
+        survey: false
       };
 
       reducer = userReducer;
