@@ -12,10 +12,10 @@
 ## Updates made by our team:
 * We are a small group (7 individuals) of Turing Students, for our current project, we were tasked with adding a style survey for users that will help them determine what their dress style is. The survey consists of a series of categories such as tops, bottoms, dresses, shoes, accessories, etc. After I have completed the survey, I am given a summary of my style such as ‘classic but edgy’. Once the user completes the style survey, their user object will be updated with a new column of style, this will allow us to filter the results that the user receives in order to more easily present items that would fit with their style. 
 
-## Style Survey
-```
-Insert images of final survey here.
-```
+## Tech Stack
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
+
 ## Contributors
 **Front-end Team:**
 * Nathan Darrington: [GitHub](https://github.com/npdarrington/) | [LinkedIn](https://www.linkedin.com/in/nathandarrington/)
