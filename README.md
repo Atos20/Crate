@@ -9,6 +9,33 @@
 - Written in ES6+ using Babel + Webpack
 - Designed using Adobe Experience Design. Preview it [here](https://xd.adobe.com/view/a662a49f-57e7-4ffd-91bd-080b150b0317/).
 
+## Updates made by our team:
+* We are a small group (7 individuals) of Turing Students, for our current project, we were tasked with adding a style survey for users that will help them determine what their dress style is. The survey consists of a series of categories such as tops, bottoms, shoes and accessories. After I have completed the survey, I am given a summary of my style such as ‘classic but edgy’. Once the user completes the style survey, their user object will be updated with a new column of style, this will allow us to filter the results that the user receives in order to more easily present items that would fit with their style. 
+
+## Tech Stack
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
+
+## Contributors
+**Front-end Team:**
+* Nathan Darrington: [GitHub](https://github.com/npdarrington/) | [LinkedIn](https://www.linkedin.com/in/nathandarrington/)
+* Orlando Martinez Murcio: [GitHub](https://github.com/Atos20) | [LinkedIn](https://www.linkedin.com/in/orlando-martinez-murcio-19605472/)
+
+**Back-end Team:**
+* Dan Halverson: [GitHub](https://github.com/dhalverson) | [LinkedIn](https://www.linkedin.com/in/daniel-halverson/)
+* Roberto Rodriguez: [GitHub](https://gist.github.com/robertorodriguez12) | [LinkedIn](https://www.linkedin.com/in/roberto-j-rodriguez12/)
+* Saryn Mooney: [GitHub](https://github.com/sarynm12) | [LinkedIn](https://www.linkedin.com/in/saryn-mooney-34503984/)
+* Alex Desjardins: [GitHub](https://github.com/moosehandlr) | [LinkedIn](https://www.linkedin.com/in/alex-desjardins-59297b8b/)  
+
+### Data flow
+![data flow](https://user-images.githubusercontent.com/56448912/101990581-e3bad300-3c64-11eb-8aac-936f799ea15c.png)
+![image](https://user-images.githubusercontent.com/56448912/101990659-42804c80-3c65-11eb-8f87-9f11a94c8b3d.png)
+
+### Survey Data flow
+![survey data flow](https://user-images.githubusercontent.com/56448912/101990381-00a2d680-3c64-11eb-8d0e-a293de4d463c.png)
+
+### Wireframe for style survey feature
+![wireframes](https://user-images.githubusercontent.com/56448912/101990295-62af0c00-3c63-11eb-8d77-7ff31a0a1ac1.png)
 
 ## Features
 - Modular and easily scalable code structure
@@ -98,7 +125,7 @@ Click on image to view fullscreen and zoom
 - Prerequisites
   - Node
   - MySQL (or Postgres / Sqlite / MSSQL)
-- Clone repo `git clone git@github.com:atulmy/crate.git crate`
+- Clone repo `git clone git@github.com:Atos20/Crate.git`
 - Switch to `code` directory `cd code`
 - Configurations
   - Modify `/api/src/config/database.json` for database credentials
@@ -108,7 +135,7 @@ Click on image to view fullscreen and zoom
 - Setup
   - API: Install packages and database setup (migrations and seed) `cd api` and `npm run setup`
   - Webapp: Install packages `cd web` and `npm install`
-  - Mobile: 
+  - Mobile:
     1. Install packages `cd mobile` and `npm install`
     2. Install iOS dependencies `cd mobile/ios` `pod install`
 - Development
@@ -118,6 +145,13 @@ Click on image to view fullscreen and zoom
 - Production
   - Run API `cd api` and `npm run start:prod`, creates an optimized build in `build` directory and runs the server
   - Run Webapp `cd web` and `npm run start:prod`, creates an optimized build in `build` directory and runs the server
+- Testing
+  - back-end testing
+      - `cd code/api`
+      - `npm run test`
+  - front-end testing
+      - enter testing commands
+
 
 ## Multi-package automation
 - New developers are advised to run through the above 'setup and running' process before reading further.
@@ -132,48 +166,8 @@ Click on image to view fullscreen and zoom
         - Run API alone `npm start:api`, browse GraphiQL at http://localhost:8000/
         - Run Webapp alone `npm start:web`, browse webapp at http://localhost:3000/
 
-## Resources and Inspirations
-- ✍️ Opinionated project architecture for Full-Stack JavaScript Applications - [GitHub](https://github.com/atulmy/fullstack-javascript-architecture)
-- 🌈 Simple Fullstack GraphQL Application - [GitHub](https://github.com/atulmy/fullstack-graphql)
-- 🌐 Universal react application with server side rendering - [GitHub](https://github.com/atulmy/universal-react)
-- Container Components - [Medium Post](https://medium.com/@learnreact/container-components-c0e67432e005)
-- Zero to GraphQL in 30 Minutes - [YouTube](https://www.youtube.com/watch?v=UBGzsb2UkeY&list=PLkuiMQfg5DujhOSZ1A8kDl0hKV_ICTjp-)
-- Building a GraphQL Server [YouTube Playlist](https://www.youtube.com/playlist?list=PLillGF-RfqbYZty73_PHBqKRDnv7ikh68)
-- Universal JavaScript Web Applications with React by [Luciano Mammino](https://github.com/lmammino) - [YouTube](https://www.youtube.com/watch?v=0VEwRFP8WtI)
-- Building Youtube UI in React Native in 30 Mins - [YouTube](https://www.youtube.com/watch?v=LdKtugH-sb8)
-- Building Stellar Mobile UX With React Native - [YouTube](https://www.youtube.com/watch?v=ssXB9RMTpTs)
-- Free MySQL hosting https://remotemysql.com
-
-
-## Why open source a project and not a boilerplate or framework?
-- While building a new project with Node, you can basically start scratch, adding libraries and tools as you go on building it further.
-- Comparing with any other languague, you usually start with a framework, for example, Laravel (PHP), Django (Python) or Ruby on Rails (Ruby) which includes a ton of features and codebase which you never end up using.
-- I've personally found, learning by going through a good project codebase step by step while building your own project helps in ease of understanding and remembering
-
-
-## Author
+## Original Author
 - Atul Yadav - [GitHub](https://github.com/atulmy) · [Twitter](https://twitter.com/atulmy)
-
-
-## Contributors
-- Ebou Jobe - [GitHub](https://github.com/ebouJ)
-- Nenad Radovanovic - [GitHub](https://github.com/nrcloud) · [Twitter](https://twitter.com/publicshone)
-- Nicholas Drew - [GitHub](https://github.com/nickdrew)
-- Mateus Abdala - [GitHub](https://github.com/mateusabdala)
-- Hossein Nedaee - [GitHub](https://github.com/hosseinnedaee)
-- Mohammad Afzal - [GitHub](https://github.com/afzalex)
-- [YOUR NAME HERE] - Feel free to contribute to the codebase by resolving any open issues, refactoring, adding new features, writing test cases or any other way to make the project better and helpful to the community. Feel free to fork and send pull requests.
-
-
-## Donate
-If you liked this project, you can donate to support it ❤️
-
-[![Donate via PayPal](https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/mix/paypal-me-smaller.png)](http://paypal.me/atulmy) [![Become a Patreon](https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/mix/patreon.png?v=1)](https://www.patreon.com/atulmy)
-
-
-## Hire me
-Looking for a developer to build your next idea or need a developer to work remotely? Get in touch: [atul.12788@gmail.com](mailto:atul.12788@gmail.com)
-
 
 ## License
 Copyright (c) 2018 Atul Yadav http://github.com/atulmy
